@@ -1,6 +1,7 @@
 from mininet.net import Mininet
 from mininet.topo import Topo
 from mininet.node import CPULimitedHost
+from mininet.node import RemoteController
 from mininet.link import TCLink
 from mininet.util import dumpNodeConnections
 from mininet.cli import CLI
@@ -46,7 +47,7 @@ class HomeTopo(Topo):
 def main():
     topo = HomeTopo()
     net = Mininet(topo=topo, host=CPULimitedHost, link=TCLink,
-                  autoPinCpus=True)
+                  autoPinCpus=True, controller=RemoteController)
     net.start()
     dumpNodeConnections(net.hosts)
     net.pingAll()
