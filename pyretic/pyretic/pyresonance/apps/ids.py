@@ -14,6 +14,7 @@ from ..policies.base_policy import *
 from ..drivers.json_event import *
 
 from ..globals import *
+from uuid import getnode as get_mac
 
 HOST = '127.0.0.1'
 PORT = 50002
@@ -65,7 +66,9 @@ class IDSPolicy(BasePolicy):
         self.fsm = fsm
  
     def infected_policy(self):
-        return drop
+        controller_mac = get_mac()
+        policy = modify(dstmac=controller_mac,dstport=50000)
+        return policy
 
     def allow_policy(self):
         return passthrough
@@ -78,7 +81,7 @@ class IDSPolicy(BasePolicy):
 
             # Create state policies for each state
             p1 = if_(match_infected_flows, self.infected_policy(), drop)
-            p2 = if_(match_clean_flows, self.allow_policy(), drop)
+            p2 = if_(match_clean_flows, self.allow_policy(), passthrough)
 
             # Parallel composition 
             return p1 + p2
