@@ -7,8 +7,11 @@ from mininet.node import Controller
 from mininet.link import TCLink
 from mininet.util import dumpNodeConnections
 from mininet.cli import CLI
+from getopt import getopt, GetoptError
+from sys import argv, exit
+
 _controller = Controller('Internet Controller', port=6666)
-_remControl = RemoteController('Remote Controller')
+_remControl = None
 _controllers = {'local': _controller, 'remote': _remControl}
 _translation = {'s1': 'local', 's2': 'remote', 's3': 'remote'}
 
@@ -19,7 +22,7 @@ class MultiController(OVSSwitch):
 
 # A typical home network
 class HomeTopo(Topo):
-    "Mininet test topology"
+    'Mininet test topology'
     def routerSetup(self, net):
         r = self.internet
         router = net[r]
@@ -84,8 +87,29 @@ class HomeTopo(Topo):
 
 
 
-def main():
-    topo = HomeTopo(ethHosts=4)
+def main(argv):
+    global _remControl
+    global _controllers
+    remote_ip = '127.0.0.1'
+    lan = 2
+    
+    try:
+        opts, args = getopt(argv[1:], 'r:l:', ['remote-ip=','lan='])
+    except GetoptError as err:
+        print err.msg, err.opt
+        exit(1);
+    print opts
+    print args
+
+    for opt, arg in opts:
+        if opt in ('-r', '--remote-ip'):
+            remote_ip = arg
+        if opt in ('-l', '--lan'):
+            lan = int(arg)
+
+    _remControl = RemoteController('Remote Controller', ip=remote_ip)
+    _controllers['remote'] = _remControl
+    topo = HomeTopo(ethHosts=lan)
     net = Mininet(topo=topo, switch=MultiController, host=CPULimitedHost, 
                   link=TCLink, autoPinCpus=True, build=False)
     net.addController(_controller)
@@ -97,4 +121,4 @@ def main():
     net.stop()
 
 if __name__ == '__main__':
-    main()
+    main(argv)
