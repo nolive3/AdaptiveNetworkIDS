@@ -1,0 +1,47 @@
+################################################################################
+# Resonance Project                                                            #
+# Resonance implemented with Pyretic platform                                  #
+# author: Hyojoon Kim (joonk@gatech.edu)                                       #
+# author: Nick Feamster (feamster@cc.gatech.edu)                               #
+# author: Muhammad Shahbaz (muhammad.shahbaz@gatech.edu)                       #
+################################################################################
+
+import subprocess, threading
+from idstools import unified2
+
+HOST = '127.0.0.1'
+PORT = 50002
+loop_alerts = True
+
+
+#could use subprocess to start snort.
+#command is sudo snort -dev -h 192.168.1.0/16 -c /etc/snort/snort.conf
+
+def get_alerts():
+   reader = unified2.SpoolRecordReader("/var/log/snort", "snort.alert", follow=True)
+   while(loop_alerts):
+        record = reader.next()
+        if(record != None):
+            cmd = "python json_sender.py --flow='{srcip=%s}' -e ids -s infected -a 127.0.0.1 -p 50002" % record["source-ip"]
+            subprocess.call(cmd, shell=True)
+            #print "source IP     : %s" % record["source-ip"]
+            #print "destination IP: %s" % record["destination-ip"]
+            #print record
+   return
+
+def main():
+
+    t = threading.Thread(target=get_alerts)
+    t.start()
+
+    while(true):
+        filler = 1 #this can be removed. just to fill the while loop
+        ##### Shanes stuff here
+        ##### Sleep if not at send deadline
+        ##### Send /var/log/snort/snort.log to the server
+        ##### Clear /var/log/snort/snort.log but leave the file there
+    
+    t.join()
+
+if __name__ == '__main__': 
+    main()
