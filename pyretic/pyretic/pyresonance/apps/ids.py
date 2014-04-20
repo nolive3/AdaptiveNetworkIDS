@@ -5,9 +5,11 @@
 # author: Nick Feamster (feamster@cc.gatech.edu)                               #
 # author: Muhammad Shahbaz (muhammad.shahbaz@gatech.edu)                       #
 ################################################################################
+import socket
 
 from pyretic.lib.corelib import *
 from pyretic.lib.std import *
+from ...modules.mac_learner import mac_learner
 
 from ..FSMs.base_fsm import *
 from ..policies.base_policy import *
@@ -66,8 +68,14 @@ class IDSPolicy(BasePolicy):
         self.fsm = fsm
  
     def infected_policy(self):
-        controller_mac = get_mac()
-        policy = modify(dstmac=controller_mac,dstport=50000)
+        string_mac = "%.012x"%get_mac()
+        controller_mac = MAC(':'.join(string_mac[i:i+2] for i in range(0,12,2)))
+        controller_ip = IP(socket.gethostbyname(socket.gethostname()))
+        print controller_ip, controller_mac
+
+        #policy = modify(dstmac=controller_mac,dstport=50000)
+        policy = modify(dstmac=MAC('11:11:11:11:11:11'))
+        print policy
         return policy
 
     def allow_policy(self):
@@ -80,11 +88,10 @@ class IDSPolicy(BasePolicy):
             match_clean_flows = self.fsm.get_policy('clean')
 
             # Create state policies for each state
-            p1 = if_(match_infected_flows, self.infected_policy(), drop)
-            p2 = if_(match_clean_flows, self.allow_policy(), passthrough)
+            p1 = if_(match_infected_flows, self.infected_policy(), passthrough)
 
             # Parallel composition 
-            return p1 + p2
+            return p1 >> mac_learner()
 
         else:
             return self.turn_off_module(self.fsm.comp.value)
