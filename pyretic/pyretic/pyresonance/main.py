@@ -250,7 +250,7 @@ def main(config, mode, modrepeat=None):
         sys.exit(1)
 
     # Run resonance
-#    return resonance(app_to_module_map, app_composition_str) >> mac_learner()
-    return resonance(app_to_module_map, app_composition_str) >> flood()
+    return resonance(app_to_module_map, app_composition_str)# >> mac_learner()
+#    return resonance(app_to_module_map, app_composition_str) >> flood()
 
 

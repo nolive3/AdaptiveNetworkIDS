@@ -7,6 +7,7 @@ from mininet.node import Controller
 from mininet.link import TCLink
 from mininet.util import dumpNodeConnections
 from mininet.cli import CLI
+from mininet.link import Intf
 _controller = Controller('Internet Controller', port=6666)
 _remControl = RemoteController('Remote Controller')
 _controllers = {'local': _controller, 'remote': _remControl}
@@ -28,7 +29,6 @@ class HomeTopo(Topo):
         remote = net[i1]
         i2 = self.evil
         evil = net[i2]
-        controller = net[self.controller]
         reth0 = router.IP(intf=r+'-eth0')
 
         router.setIP(intf=r+'-eth1', ip='192.168.1.1/24')
@@ -38,10 +38,11 @@ class HomeTopo(Topo):
         router.setIP(intf=r+'-eth2', ip='192.168.2.1/24')
         evil.setIP(ip='192.168.2.2/24')
         evil.setDefaultRoute('via 192.168.2.1')
-
-        controller.setIP(ip='10.0.1.1/8')
-        controller.setMAC(mac='11:11:11:11:11:11')
-        controller.setDefaultRoute('via %s'%reth0)
+ 
+        self.controller = Intf('eth2', node=net[self.switch])
+        #controller.setIP(ip='10.0.0.240/8')
+        #controller.setMAC(mac='11:11:11:11:11:11')
+        #controller.setDefaultRoute('via %s'%reth0)
 
         for host in hosts:
             host.setDefaultRoute('via %s'%reth0)
@@ -66,11 +67,10 @@ class HomeTopo(Topo):
 
         self.remote = self.addHost('remote', **hostConfig)
         self.evil = self.addHost('evil', **hostConfig)
-        self.controller = self.addHost('controller', **hostConfig)
 
         self.addLink(self.remote, self.internet, **internetLinkConfig)
         self.addLink(self.evil, self.internet, **internetLinkConfig)
-        self.addLink(self.controller, self.switch, **ethernetLinkConfig)
+        #self.addLink(self.controller, self.switch, **ethernetLinkConfig)
 
         for i in range(ethHosts):
             self.ethHosts.append(self.addHost('lan'+str(i), **hostConfig))
