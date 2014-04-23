@@ -9,6 +9,7 @@ import socket
 
 from pyretic.lib.corelib import *
 from pyretic.lib.std import *
+from pyretic.lib.query import *
 from ...modules.mac_learner import mac_learner
 
 from ..FSMs.base_fsm import *
@@ -66,6 +67,7 @@ class IDSPolicy(BasePolicy):
     
     def __init__(self, fsm):
         self.fsm = fsm
+        self.mac_learner = mac_learner()
  
     def infected_policy(self):
         #string_mac = "%.012x"%get_mac()
@@ -73,9 +75,7 @@ class IDSPolicy(BasePolicy):
         #controller_ip = IP(socket.gethostbyname(socket.gethostname()))
         #print controller_ip, controller_mac
 
-        #policy = modify(dstmac=controller_mac,dstport=50000)
-        policy = modify(dstmac=MAC('11:11:11:11:11:11'))
-        print policy
+        policy = modify(dstmac=controller_mac,dstport=50000)
         return policy
 
     def allow_policy(self):
