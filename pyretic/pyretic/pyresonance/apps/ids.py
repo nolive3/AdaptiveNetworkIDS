@@ -71,7 +71,7 @@ class IDSPolicy(BasePolicy):
  
     def infected_policy(self):
         #string_mac = "%.012x"%get_mac()
-        controller_mac = MAC(':'.join(string_mac[i:i+2] for i in range(0,12,2)))
+        #controller_mac = MAC(':'.join(string_mac[i:i+2] for i in range(0,12,2)))
         #controller_ip = IP(socket.gethostbyname(socket.gethostname()))
         #print controller_ip, controller_mac
 
@@ -85,13 +85,12 @@ class IDSPolicy(BasePolicy):
         if self.fsm.trigger.value == 0:
             # Match incoming flow with each state's flows
             match_infected_flows = self.fsm.get_policy('infected')
-            match_clean_flows = self.fsm.get_policy('clean')
 
             # Create state policies for each state
             p1 = if_(match_infected_flows, self.infected_policy(), passthrough)
 
             # Parallel composition 
-            return p1 >> mac_learner()
+            return p1
 
         else:
             return self.turn_off_module(self.fsm.comp.value)
