@@ -356,9 +356,9 @@ class POXClient(revent.EventMixin):
         try:
             self.switches[switch]['connection'].send(msg)
         except RuntimeError, e:
-            print "WARNING:install_flow: %s to switch %d" % (str(e),switch)
+            print "WARNING:install_flow: %s to switch %s" % (str(e),repr(switch))
         except KeyError, e:
-            print "WARNING:install_flow: No connection to switch %d available" % switch
+            print "WARNING:install_flow: No connection to switch %s available" % repr(switch)
 
     def delete_flow(self,pred,priority):
         switch = pred['switch']

@@ -5,9 +5,12 @@
 # author: Nick Feamster (feamster@cc.gatech.edu)                               #
 # author: Muhammad Shahbaz (muhammad.shahbaz@gatech.edu)                       #
 ################################################################################
+import os
+import sys
 
 import subprocess, threading
 from idstools import unified2
+from pyretic.pyresonance.json_sender import main as send_json
 
 HOST = '127.0.0.1'
 PORT = 50002
@@ -22,8 +25,9 @@ def get_alerts():
    while(loop_alerts):
         record = reader.next()
         if(record != None):
-            cmd = "python json_sender.py --flow='{srcip=%s}' -e ids -s infected -a 127.0.0.1 -p 50002" % record["source-ip"]
-            subprocess.call(cmd, shell=True)
+            cmd = "python ../pyretic/pyretic/pyresonance/json_sender.py --flow='{srcip=%s}' -e ids -s infected -a %s -p %d" % (record["source-ip"], HOST, PORT)
+            myenv = os.environ.copy()
+            subprocess.call(cmd, shell=True, env=myenv)
             #print "source IP     : %s" % record["source-ip"]
             #print "destination IP: %s" % record["destination-ip"]
             #print record
@@ -31,9 +35,9 @@ def get_alerts():
 
 def main():
 
-    t = threading.Thread(target=get_alerts)
-    t.start()
-
+    #t = threading.Thread(target=get_alerts)
+    #t.start()
+    get_alerts()
     while(true):
         filler = 1 #this can be removed. just to fill the while loop
         ##### Shanes stuff here
@@ -41,7 +45,7 @@ def main():
         ##### Send /var/log/snort/snort.log to the server
         ##### Clear /var/log/snort/snort.log but leave the file there
     
-    t.join()
+    #t.join()
 
 if __name__ == '__main__': 
     main()
