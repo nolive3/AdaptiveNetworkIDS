@@ -3,10 +3,10 @@ export PYTHONPATH=$PYTHONPATH:/home/pi/AdaptiveNetworkIDS/pyretic
 rm -f /var/log/snort/snort.alert
 rm -f /var/log/snort/snort.log
 
-python real_ids.py &
-PY_PID=$!
 snort -dev -c /etc/snort/snort.conf > /dev/null &
 SNORT_PID=$!
+python real_ids.py &
+PY_PID=$!
 
 read 1
 

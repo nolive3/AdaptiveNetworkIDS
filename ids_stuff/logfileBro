@@ -1,0 +1,192 @@
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
+
+Flow = {srcip=192.168.2.2}
+
+Data Payload = {'dstip': None, 'protocol': None, 'srcmac': None, 'tos': None, 'vlan_pcp': None, 'dstmac': None, 'inport': None, 'ethtype': None, 'srcip': '192.168.2.2', 'dstport': None, 'srcport': None, 'vlan_id': None}
+
+ok
